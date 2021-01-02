@@ -1,0 +1,41 @@
+@charset "utf-8";
+*{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+html, body{margin: 0;padding: 0;}
+header, section, article, aside, nav, main, footer{display: block;}
+header:after, section:after, article:after, aside:after, nav:after, main:after, footer:after{content: "";display: block;clear: both;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0;padding: 0;list-style: none;}
+a{text-decoration: none;}
+.clear{clear: both;}
+
+/* 포토샵에서 이미지 사이즈와 캔버스 사이즈로 사진 자르고 들어오기 */
+
+#h_slide{width: 1200px;height: 300px;overflow: hidden;margin: 0 auto;position: relative;}
+#h_slide .slide_frame{width: 100%;height: 100%;}
+#h_slide .slide_frame ul{width: 3600px;height: 100%;}
+#h_slide .slide_frame ul li{width: 1200px;height: 100%;float: left;}
+#h_slide .slide_frame ul li.slide_01{background-image: url(../images/slide_01.jpg);}
+#h_slide .slide_frame ul li.slide_02{background-image: url(../images/slide_02.jpg);}
+#h_slide .slide_frame ul li.slide_03{background-image: url(../images/slide_03.jpg);}
+
+#h_slide h2{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);color: #fff;text-shadow: 0 0 4px rgba(0,0,0,0.5);font-size: 24fx;}
+
+#v_slide{width:1200px; height: 300px;overflow: hidden;margin: 0 auto;position: relative;}
+#v_slide .slide_frame{width: 100%;height: 100%;}
+#v_slide .slide_frame ul{width: 100%;height: 900px;}
+#v_slide .slide_frame ul li{width: 100%;height: 300px;}
+#v_slide .slide_frame ul li.slide_01{background-image: url(../images/slide_01.jpg);}
+#v_slide .slide_frame ul li.slide_02{background-image: url(../images/slide_02.jpg);}
+#v_slide .slide_frame ul li.slide_03{background-image: url(../images/slide_03.jpg);}
+#v_slide h2{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);color: #fff;text-shadow: 0 0 4px rgba(0,0,0,0.5);font-size: 24fx;}
+
+
+
+#fade_slide{width: 1200px;height: 300px;margin: 0 auto;position: relative;}
+#fade_slide li{position: absolute;top: 0;left: 0;width: 1200px;height: 300px;opacity: 0;transition: opacity 0.5s;}
+#fade_slide li.slide_01{background-image: url(../images/slide_01.jpg);}
+#fade_slide li.slide_02{background-image: url(../images/slide_02.jpg);}
+#fade_slide li.slide_03{background-image: url(../images/slide_03.jpg);}
+#fade_slide li.active{z-index: 1;opacity: 1;}
+
+#fade_slide h2{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);color: #fff;text-shadow: 0 0 4px rgba(0,0,0,0.5);font-size: 24px;z-index: 2;}
